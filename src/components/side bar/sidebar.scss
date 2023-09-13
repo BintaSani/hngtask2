@@ -1,0 +1,106 @@
+.sidebar{
+    width: 15%;
+    border: 1px solid black;
+    border-radius: 0 50px 50px 0;
+    height: 100vh;
+    padding-top: 8vh;
+
+    .icons{
+        display: flex;
+        
+        margin-bottom: 0;
+        
+
+        .icon{
+            margin: auto;
+        }
+        
+        
+        img{
+            width: 30px;
+            height: 30px;
+            margin: auto;
+        }
+    }
+
+    .logo{
+        padding-left: 10%;
+    }
+    .one{
+        background-color: #BE123C1A;
+        border-right: 5px solid #BE123C;
+
+        .m{
+            color: #BE123C;
+        }
+        
+    }
+    .two{
+        height: 10vh;
+        padding-left: 13%;
+        padding-right:15%;
+
+        &:hover{
+            background-color: #BE123C1A;
+            border-right: 5px solid #BE123C;
+        }
+    }
+    h2{
+        margin: auto;
+    }
+    .text{
+        color: #666666;
+        font-size: 1rem;
+
+        &:hover{
+            color: #BE123C;
+        }
+
+    }
+    .cont{
+        border: 1px solid #BE123C;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 20px;
+        width: 70%;
+        height: 25vh;
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+        justify-content: center;
+        padding-top: 4vh;
+        background-color: #BE123C10;
+
+        .play{
+            width: 70%;
+            font-size: 0.8rem;
+            font-family: 'Poppins', sans-serif;
+            color:#333333CC;
+            
+            font-weight: 600;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .people{
+            font-size: 0.6rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 100;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            color: #666666;
+            margin-bottom: 1vh;
+            margin-top: 1vh;
+        }
+        button {
+            background-color: #BE123C33;
+            border: none;
+            border-radius: 10px;
+            color:  #BE123C;
+            font-size: 0.6rem;
+            font-family: 'Poppins', sans-serif;
+            width: 50%;
+            height: 3.5vh;
+            margin-left: 24%;
+        };
+    }
+}

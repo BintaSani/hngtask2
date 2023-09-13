@@ -1,0 +1,97 @@
+.backdrop {
+    margin-top: 0;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    
+    
+    .details{
+        width: 25%;
+        height: 100vh;
+        padding: auto;
+        display: flex;
+        flex-direction: column;
+        text-shadow: 1px 1px 2px grey;
+        justify-content: center;
+        color: #D1D5DB;
+        margin-left: 8%;
+        padding-top: auto;
+        padding-bottom: auto;
+        
+        
+
+        .title {
+        font-weight: bold;
+        margin-bottom: 6px;
+        font-size: 3rem;
+        margin: 0;
+        
+        }
+
+        .ratings{
+            justify-content: space-between;
+            display: flex;
+            width: 100%;
+            margin-top: 2vh;
+    
+            .imdb, .tomato{
+                display: flex;
+                margin: auto;
+                
+                #Capa_1{
+                    margin-right: 10px;
+                }
+                .votes{
+                    margin: auto;
+                }
+            }
+            .imdb{
+                margin-left: 0;
+    
+                .popularity{
+                    margin: auto;
+                    font-size: 0.9rem;
+                }
+                .imdb-logo{
+                    margin-right: 10px;
+                }
+            }
+            
+        }
+        
+        .overview{
+            margin-bottom: 3vh;
+        }
+        .watch-now{
+            background-color: #BE123C;
+            border: none;
+            border-radius: 5px;
+            color: #D1D5DB;
+            display: flex;
+            padding: auto;
+            height: 5vh;
+            width: 48%;
+
+            &:hover{
+                color: #BE123C;
+                background-color: #D1D5DB;
+            }
+
+            p{
+                margin: auto;
+                font-size: small;
+                margin-left: 0;
+            }
+            .play{
+                margin: auto;
+
+                .play:hover{
+                    fill: #BE123C;
+                    stroke: #BE123C;
+                }
+                
+            }
+        }
+    }    
+}
