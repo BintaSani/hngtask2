@@ -1,9 +1,23 @@
+@mixin devices($breakpoint) { //the name of the mixin is devices
+  
+    @if $breakpoint == tiny {    
+    @media screen and (max-width: 800px){
+      @content;
+    }
+  }
+  
+}
+
 .details{
     width: 85%;
-
     height: 100vh;
     padding: 2.5%;
 
+    @include devices(tiny){
+        width: 100%;
+    }
+    
+    
     .img{
         width: 100%;
         
@@ -26,8 +40,16 @@
             top: 3vh;
             left: 50%;
             z-index: 2;
-            width: 11%;
+            width: 20%;
             padding-top: 13vh;
+            
+
+            @include devices(tiny){
+                left: 35%;
+                font-size: 0.7rem;
+                width: 30%;
+                
+            }
 
             .logo{
                 
@@ -41,16 +63,24 @@
 
                 }
                 .play:hover{
-                    fill: #BE123C;
+                    //fill: #BE123C;
+                    filter: invert(190%) sepia(1) saturate(83%) hue-rotate(345.3deg);
                 }
             }
             .trailer{
-                margin-left: auto;
-                margin-right: auto;
+                margin-left: 12%;
+                
+                font-size: 0.8rem;
                 font-family: 'Poppins', 'sans-serif';
-                margin-top: 0;
+                margin-top: 7vh;
                 color: #e8e8e8;
                 text-shadow: rgba(232, 232, 232, 1);
+
+                @include devices(tiny){
+                    margin-top: 1vh;
+                    margin-left: 15%;
+                
+                }
             }
             
         }
@@ -62,6 +92,10 @@
         
         .now{
             width: 60%;
+
+            @include devices(tiny){
+                width: 100%;
+            }
 
             .name{
                 width: 100%;
@@ -77,9 +111,21 @@
                     margin-top: auto;
                     margin-bottom: auto;
                     font-family: 'Poppins', 'sans-serif';
+                    font-size: 0.6rem;
+
+                    @include devices(tiny){
+                        font-size: 0.5rem;
+                    }
+                }
+                .bullet{
+                    display: flex;
+
+                    .h2{
+                        margin-right: 4px;
+                    }
                 }
                  button{
-                    width: 15%;
+                    width: 13%;
                     height: 4vh;
                     border-radius: 15px;
                     color: #BE123C;
@@ -88,19 +134,31 @@
                     margin-top: auto;
                     margin-bottom: auto;
                     font-family: 'Poppins', 'sans-serif';
+                    font-size: 0.6rem;
+                    
+                    @include devices(tiny){
+                        font-size: 0.6rem;
+                        width: 13%;
+                        height: 3vh;
+                    }
+
                  }
             }
     
             .director{
                 width: 100%;
-                
                 height: 40vh;
-
+                
+                
                 p[data-testid="movie-overview"]{
                     font-family: 'Poppins', 'sans-serif';
                     text-align: justify;
-                    font-size: 1rem;
+                    font-size: 0.6rem;
                     color: #333333;
+
+                    @include devices(tiny){
+                        font-size: 0.6rem;
+                    }
                 }
 
                 .stars{
@@ -118,6 +176,10 @@
             padding-left: 2%;
             padding-right: 2%;
             width: 40%;
+
+            @include devices(tiny){
+                display: none;
+            }
 
             .show{
                 width: 100%;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Preview from '../components/preview/preview';
-import CarouselPage from '../components/carousel/carousel';
+import Hero from '../components/hero/hero';
 import Header from '../components/header/header';
 import Footer from '../components/footer/footer';
 
@@ -11,7 +11,7 @@ const HomePage = () => {
     return(
         <div className='homepage'>
             <Header/>
-            <CarouselPage/>
+            <Hero/>
             <div className='feature'>
                 <h3>Featured movies</h3>
                 <p>See more  &#10095;</p>

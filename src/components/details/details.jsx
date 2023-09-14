@@ -13,7 +13,9 @@ import { useParams } from 'react-router-dom';
 
 const Details = () => {
     const {id} = useParams();
-    const [loading, setLoading] = useState(true)
+    
+    const [loading, setLoading] = useState(true);
+    
     const [image, setImage] = useState([]);
     const [title, setTitle] = useState([]);
     const [date, setDate] = useState([]);
@@ -44,7 +46,7 @@ const Details = () => {
         alert(`${error.message}`)
     }
     
-
+    
     
 
     return(
@@ -53,7 +55,7 @@ const Details = () => {
             <><div className='img'>
                     <img src={"https://image.tmdb.org/t/p/w1280" + image} alt='bg' />
                     <div className='watch'>
-                        <div className='logo'>
+                        <div className='logo' >
                             <PlayNow />
                         </div>
                         <h3 className='trailer'>Watch Trailer</h3>
@@ -62,8 +64,9 @@ const Details = () => {
                         <div className='now'>
                             <div className='name'>
                                 <h2 data-testid="movie-title">{title}</h2>
-                                <h2 data-testid="movie-release-date">&#8226;  {date}</h2>
-                                <h2 data-testid="movie-runtime">&#8226; {time} mins</h2>
+                                <div className='bullet'><h2 className='h2'>&#8226;</h2><h2 data-testid="movie-release-date">{date}</h2></div>
+                                <h2 >&#8226; PG-13</h2>
+                                <div className='bullet'><h2 className='h2'>&#8226;</h2><h2 data-testid="movie-runtime">{time} mins</h2></div>
 
                                 <button>action</button>
                                 <button>drama</button>

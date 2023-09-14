@@ -7,8 +7,8 @@ import {ReactComponent as Menu} from '../../assets/Menu.svg';
 
 import './header.scss';
 
-const Header = (movie) => {
-    
+const Header = () => {
+   
     return(
         <div className='header'>
             <div className='logo-container'>
@@ -16,13 +16,13 @@ const Header = (movie) => {
                 <h2>MovieBox</h2>
             </div>
             <div className='search-container' >
+                
                 <input type="search" 
-                     
-                    className="search" 
+                     className='search'
                     placeholder="What do you want to watch?"/>
-                <datalist id="movies">
-                </datalist>
-                <Search />
+                
+                <Search/>
+                
             </div>
             <div className='menu-container'>
                 <h3>Sign in</h3>

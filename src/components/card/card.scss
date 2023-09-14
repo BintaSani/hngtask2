@@ -1,3 +1,13 @@
+@mixin devices($breakpoint) { //the name of the mixin is devices
+  
+    @if $breakpoint == tiny {    
+    @media screen and (max-width: 800px){
+      @content;
+    }
+  }
+  
+}
+
 div[data-testid='movie-card'] {
     width: 15vw;
     margin-bottom: 25vh;
@@ -5,7 +15,14 @@ div[data-testid='movie-card'] {
     height: 45vh;
     align-items: center;
 
-    
+    &:hover{
+        opacity: 0.8;
+    }
+
+    @include devices(tiny){
+        width: 40vw;
+        
+    }
   
     div[data-testid='movie-poster'] {
       width: 100%;
@@ -13,81 +30,118 @@ div[data-testid='movie-card'] {
       background-size: cover;
       background-position: center;
       margin-bottom: 5px;
+      
+        .svg{
+            
+            width: 20%;
+            margin-left: 80%;
+            padding-top: 2vh;
 
-      #favorite{
-        margin-left: 80%;
-        margin-top: 2vh;
+            @include devices(tiny){
+                margin-left: 75%;
+                padding-top: 2vh;
+            }
 
-        &:hover{
-            fill: #BE123C;
+            .favorite:hover{
+                height: 22px;
+                width: 22px;
+                //fill: #BE123C;
+                filter: invert(.6) sepia(1) saturate(5) hue-rotate(330deg);
+            }
         }
-      }
+     
 
     }
+    .details{
+        width: 100%;
+        h5[data-testid='movie-title'] {
+            font-size: 0.9rem;
+            margin: 0px;
+            color: #111827;
+            margin-top: 2vh;
+            
+        }
 
-    h5[data-testid='movie-title'] {
-        font-size: 1.2rem;
-        margin: 0px;
-        color: #111827;
-        margin-top: 2vh;
+        .ratings{
+            margin-top: 1.5vh;
+            justify-content: space-between;
+            display: flex;
+            
+
+            .imdb, .tomato{
+                display: flex;
+                margin: auto;
+                
+                @include devices(tiny){
+                    justify-content: space-between;
+                }
+                
+            }
+            .imdb{
+                margin-left: 0;
+                height: 3vh;
+                justify-content: space-between;
+                .imdb-logo{
+                    margin-right: 5px;
+
+                    @include devices(tiny){
+                        height: 2vh;
+                        margin: auto;
+                    }
+                    
+                }
+
+                .popularity{
+                    margin: auto;
+                    font-size: 0.6rem;
+                    color: #111827;
+
+                    @include devices(tiny){
+                        font-size: 0.6rem;
+                        margin: auto;
+                        padding-left: 3px;
+                    }
+                }
+            }
+            .tomato{
+                margin-right: 0;
+                
+
+                #Capa_1{
+                    
+                    margin-right: 5px;
+                    height: 15px;
+
+                    @include devices(tiny){
+                        height: 2vh;
+                        margin: auto;
+                    }
+                }
+                .votes{
+                    margin: auto;
+                    font-size: 0.6rem;
+                    color: #111827;
+
+                    @include devices(tiny){
+                        font-size: 0.6rem;
+                        margin: auto;
+                        
+                    }
+                }
+            }
+        }
+        
+
+        p[data-testid='movie-release-date'] {
+            font-size: 0.5rem;
+            color: #9CA3AF;
+            margin: 0px;
+        }
+        
+        
+
+        
         
     }
-
-    .ratings{
-        margin-top: 1.5vh;
-        justify-content: space-between;
-        display: flex;
-
-        .imdb, .tomato{
-            display: flex;
-            margin: auto;
-            
-            
-            
-        }
-        .imdb{
-            margin-left: 0;
-            
-            .imdb-logo{
-                margin-right: 5px;
-                
-            }
-
-            .popularity{
-                margin: auto;
-                font-size: 0.8rem;
-                color: #111827;
-            }
-        }
-        .tomato{
-            margin-right: 1px;
-
-            #Capa_1{
-                margin-right: 5px;
-
-                
-            }
-            .votes{
-                margin: auto;
-                font-size: 0.8rem;
-                color: #111827;
-            }
-        }
-    }
-    
-
-    p[data-testid='movie-release-date'] {
-        font-size: 0.8rem;
-        color: #9CA3AF;
-        margin: 0px;
-    }
-    
-    
-
-    
-    &:hover{
-        opacity: 0.8;
-      }
-    
 }
   

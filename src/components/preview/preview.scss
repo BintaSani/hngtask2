@@ -1,8 +1,23 @@
+@mixin devices($breakpoint) { //the name of the mixin is devices
+  
+  @if $breakpoint == tiny {    
+  @media screen and (max-width: 800px) {
+    @content;
+  }
+}
+
+}
+
 .preview {
     display: grid;
     grid-template-columns: auto auto auto auto;
     margin-bottom: 30px;
     justify-content: space-evenly;
+    margin-top: 2vh;
   
-    
+    @include devices(tiny){
+      grid-template-columns: auto auto;
+      justify-content: space-evenly;
+      margin-top: 2vh;
+    }
   }

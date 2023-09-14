@@ -10,12 +10,14 @@ import {  useNavigate } from 'react-router-dom';
 
 
 const Card = ({movie}) =>{
+    
     const {title, id, release_date, vote_average, poster_path, popularity} = movie;
-    const popular = popularity / 60;
+    const popular = popularity / 1.5;
     const imdb = Math.round(popular * 10) / 10;
 
     const navigate = useNavigate();
-    //const {pathname } = useLocation();
+    
+    
 
     return(
         <div data-testid='movie-card'>
@@ -23,8 +25,10 @@ const Card = ({movie}) =>{
             <div data-testid='movie-poster' style={{
                 backgroundImage: `url(${"https://image.tmdb.org/t/p/w500" + poster_path})`}}
                 onClick={()=> navigate (`/movie/${id}`)}>
-                {/* <img data-testid='movie-poster' src={"https://image.tmdb.org/t/p/w500" + poster_path} alt={movie.path}/> */}
-                <Favorite/>
+                <div className='svg'>
+                    <Favorite />
+                </div>    
+                
             </div>
             <div className='details'>
                 <p data-testid='movie-release-date'>{release_date}</p>

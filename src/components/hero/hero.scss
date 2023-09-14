@@ -1,31 +1,52 @@
-.backdrop {
-    margin-top: 0;
+@mixin devices($breakpoint) { //the name of the mixin is devices
+  
+    @if $breakpoint == tiny {    
+    @media screen and (max-width: 800px) {
+      @content;
+    }
+  }
+  
+}
+
+.hero{
     width: 100%;
     height: 100vh;
     background-position: center;
     background-size: cover;
     
+    @include devices(tiny){
+        height: 30vh;
+    }
     
     .details{
-        width: 25%;
+        width: 30%;
         height: 100vh;
         padding: auto;
         display: flex;
         flex-direction: column;
-        text-shadow: 1px 1px 2px grey;
+        
         justify-content: center;
         color: #D1D5DB;
-        margin-left: 8%;
+        margin-left: 5%;
         padding-top: auto;
         padding-bottom: auto;
         
-        
+        @include devices(tiny){
+            
+            width: 40%;
+            height: 30vh;
+        }
 
         .title {
         font-weight: bold;
         margin-bottom: 6px;
-        font-size: 3rem;
+        font-size: 1.5rem;
         margin: 0;
+
+        @include devices(tiny){
+            font-size: 0.9rem;
+            
+        }
         
         }
 
@@ -34,6 +55,11 @@
             display: flex;
             width: 100%;
             margin-top: 2vh;
+            margin-bottom: 2vh;
+
+            @include devices(tiny){
+                display: none;
+            }
     
             .imdb, .tomato{
                 display: flex;
@@ -41,9 +67,12 @@
                 
                 #Capa_1{
                     margin-right: 10px;
+                    height: 15px;
+                    width: 15px;
                 }
                 .votes{
                     margin: auto;
+                    font-size: 0.7rem;
                 }
             }
             .imdb{
@@ -51,10 +80,11 @@
     
                 .popularity{
                     margin: auto;
-                    font-size: 0.9rem;
+                    font-size: 0.7rem;
                 }
                 .imdb-logo{
                     margin-right: 10px;
+                    height: 3vh;
                 }
             }
             
@@ -62,6 +92,11 @@
         
         .overview{
             margin-bottom: 3vh;
+            font-size: 0.9rem;
+
+            @include devices(tiny){
+                display: none;
+            }
         }
         .watch-now{
             background-color: #BE123C;
@@ -73,6 +108,12 @@
             height: 5vh;
             width: 48%;
 
+            @include devices(tiny){
+                width: 50%;
+                height: 2vh;
+                margin-top: 1vh;
+            }
+
             &:hover{
                 color: #BE123C;
                 background-color: #D1D5DB;
@@ -80,8 +121,13 @@
 
             p{
                 margin: auto;
-                font-size: small;
+                font-size: 0.6rem;
                 margin-left: 0;
+
+                @include devices(tiny){
+                    font-size: 0.4rem;
+                    margin: auto;
+                }
             }
             .play{
                 margin: auto;
@@ -90,8 +136,12 @@
                     fill: #BE123C;
                     stroke: #BE123C;
                 }
-                
+                @include devices(tiny){
+                    display: none;
+                }
             }
         }
     }    
+
+    
 }

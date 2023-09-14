@@ -6,15 +6,3 @@ export const options = {
     }
   };
   
-const data = await fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
-const movies = await data.json();
-export const MovieArray = await movies.results;
-
-
-
-
-// const trending = await fetch(`https://api.themoviedb.org/3/movie/${238}??&append_to_response=videos&language=en-US`, options);
-// export const list = await trending.json();
-// console.log(list);
-// export const SearchMovie = await list.results;
-// console.log(SearchMovie);

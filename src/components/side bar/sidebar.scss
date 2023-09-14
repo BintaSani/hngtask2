@@ -1,3 +1,12 @@
+@mixin devices($breakpoint) { //the name of the mixin is devices
+  
+    @if $breakpoint == tiny {    
+    @media screen and (max-width: 800px) {
+      @content;
+    }
+  }
+  
+}
 .sidebar{
     width: 15%;
     border: 1px solid black;
@@ -5,9 +14,13 @@
     height: 100vh;
     padding-top: 8vh;
 
+    @include devices(tiny){
+        display: none;
+    }
+
     .icons{
         display: flex;
-        
+        cursor: pointer;
         margin-bottom: 0;
         
 
@@ -17,14 +30,22 @@
         
         
         img{
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             margin: auto;
         }
     }
 
     .logo{
         padding-left: 10%;
+        
+        #logo{
+            width: 35px;
+            height: 35px;
+        }
+        h2{
+            font-size: 1rem;
+        }
     }
     .one{
         background-color: #BE123C1A;
@@ -39,6 +60,10 @@
         height: 10vh;
         padding-left: 13%;
         padding-right:15%;
+
+        h2{
+            font-size: 0.7rem;
+        }
 
         &:hover{
             background-color: #BE123C1A;
@@ -72,7 +97,7 @@
 
         .play{
             width: 70%;
-            font-size: 0.8rem;
+            font-size: 0.5rem;
             font-family: 'Poppins', sans-serif;
             color:#333333CC;
             
@@ -81,7 +106,7 @@
             margin-right: auto;
         }
         .people{
-            font-size: 0.6rem;
+            font-size: 0.5rem;
             font-family: 'Poppins', sans-serif;
             font-weight: 100;
             width: 70%;
@@ -98,9 +123,10 @@
             color:  #BE123C;
             font-size: 0.6rem;
             font-family: 'Poppins', sans-serif;
-            width: 50%;
+            width: 60%;
             height: 3.5vh;
-            margin-left: 24%;
+            margin-left: 19.5%;
+            font-size: 0.4rem;
         };
     }
 }

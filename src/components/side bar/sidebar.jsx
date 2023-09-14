@@ -9,15 +9,17 @@ import Exit from '../../assets/Logout.png';
 
 
 import './sidebar.scss';
+import { useNavigate } from "react-router-dom";
 
 const SideBar = () => {
+    const navigate = useNavigate();
     return(
         <div className="sidebar">
             <div className="icons logo">
-                <Logo/>
+                <Logo onClick={()=> navigate (`/`)}/>
                 <h2>MovieBox</h2>
             </div>
-            <div className="icons two ">
+            <div className="icons two " onClick={()=> navigate (`/`)}>
                 <img src={Home} alt="home"/>
                 <h2 className="text">Home</h2>
             </div>
