@@ -66,6 +66,10 @@
             font-size: 0.9rem;
             padding-left: 1.5%;
 
+            @include devices(tiny){
+                padding-top: 1vh;
+            }
+
             &::placeholder{
                 color: #D1D5DB;
                 font-size: 0.9rem;

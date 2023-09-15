@@ -66,7 +66,7 @@ const Details = () => {
                                 <h2 data-testid="movie-title">{title}</h2>
                                 <div className='bullet'><h2 className='h2'>&#8226;</h2><h2 data-testid="movie-release-date">{date}</h2></div>
                                 <h2 >&#8226; PG-13</h2>
-                                <div className='bullet'><h2 className='h2'>&#8226;</h2><h2 data-testid="movie-runtime">{time} mins</h2></div>
+                                <div className='bullet'><h2 className='h2'>&#8226;</h2><h2 data-testid="movie-runtime">{time}</h2><h2>mins</h2></div>
 
                                 <button>action</button>
                                 <button>drama</button>
