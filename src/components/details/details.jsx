@@ -50,9 +50,9 @@ const Details = () => {
     
 
     return(
-        <div className='details'>
+        <div className='detailsx'>
             {loading === false ?   (
-            <><div className='img'>
+            <>  <div className='img'>
                     <img src={"https://image.tmdb.org/t/p/w1280" + image} alt='bg' />
                     <div className='watch'>
                         <div className='logo' >
@@ -60,32 +60,34 @@ const Details = () => {
                         </div>
                         <h3 className='trailer'>Watch Trailer</h3>
                     </div>
-                </div><div className='container'>
-                        <div className='now'>
-                            <div className='name'>
-                                <h2 data-testid="movie-title">{title}</h2>
-                                <div className='bullet'><h2 className='h2'>&#8226;</h2><h2 data-testid="movie-release-date">{date}</h2></div>
-                                <h2 >&#8226; PG-13</h2>
-                                <div className='bullet'><h2 className='h2'>&#8226;</h2><h2 data-testid="movie-runtime">{time}</h2><h2>mins</h2></div>
+                </div>
+                <div className='container'>
+                    <div className='now'>
+                        <div className='name'>
+                            <h2 data-testid="movie-title">{title}</h2>
+                            <div className='bullet'><h2 className='h2'>&#8226;</h2><h2 data-testid="movie-release-date">{date}</h2></div>
+                            <h2 >&#8226; PG-13</h2>
+                            <div className='bullet'><h2 className='h2'>&#8226;</h2><h2 data-testid="movie-runtime">{time}</h2><h2>mins</h2></div>
 
-                                <button>action</button>
-                                <button>drama</button>
+                            <button>action</button>
+                            <button>drama</button>
 
-
-                            </div>
-
-                            <div className='director'>
-                                <p data-testid="movie-overview">{overview}</p>
-                                <img src={Group54} alt='new' className='stars' />
-                                <img src={Group53} alt='new' className='related' />
-                            </div>
 
                         </div>
-                        <div className='imgs'>
-                            <img src={Group55} alt='grp' className='show' />
-                            <img src={Group52} alt='grp' className='more' />
+
+                        <div className='director'>
+                            <p data-testid="movie-overview">{overview}</p>
+                            <img src={Group54} alt='new' className='stars' />
+                            <img src={Group53} alt='new' className='related' />
                         </div>
-                    </div></>) : (
+
+                    </div>
+                    <div className='imgs'>
+                        <img src={Group55} alt='grp' className='show' />
+                        <img src={Group52} alt='grp' className='more' />
+                    </div>
+                </div>
+            </>) : (
                         <LoadingSpinner/>
                     )}
         </div>

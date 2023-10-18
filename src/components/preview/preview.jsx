@@ -21,6 +21,7 @@ const Preview = () =>{
         console.log(error);
         alert(`${error.message}`)
     }
+    console.log(topRated);
     return(
     <div className='preview'>
         {

@@ -33,18 +33,18 @@
         
         @include devices(tiny){
             
-            width: 40%;
+            width: 30%;
             height: 30vh;
         }
 
         .title {
         font-weight: bold;
         margin-bottom: 6px;
-        font-size: 1.5rem;
+        font-size: 4rem;
         margin: 0;
 
         @include devices(tiny){
-            font-size: 0.9rem;
+            font-size: 0.6rem;
             
         }
         
@@ -58,7 +58,8 @@
             margin-bottom: 2vh;
 
             @include devices(tiny){
-                display: none;
+                margin-top: 0.5vh;
+                margin-bottom: 0.8vh;
             }
     
             .imdb, .tomato{
@@ -67,12 +68,21 @@
                 
                 #Capa_1{
                     margin-right: 10px;
-                    height: 15px;
-                    width: 15px;
+                    height: 30px;
+                    width: 30px;
+
+                    @include devices(tiny){
+                        height: 1.5vh;
+                        width: 15px;
+                        margin-right: 3px;
+                    }
                 }
                 .votes{
                     margin: auto;
-                    font-size: 0.7rem;
+                    font-size: 1.3rem;
+                    @include devices(tiny){
+                        font-size: 0.35rem;
+                    }
                 }
             }
             .imdb{
@@ -80,11 +90,20 @@
     
                 .popularity{
                     margin: auto;
-                    font-size: 0.7rem;
+                    font-size: 1.3rem;
+
+                    @include devices(tiny){
+                        font-size: 0.35rem;
+                    }
                 }
                 .imdb-logo{
                     margin-right: 10px;
                     height: 3vh;
+                    @include devices(tiny){
+                        height: 1.5vh;
+                        width: 15px;
+                        margin-right: 3px;
+                    }
                 }
             }
             
@@ -92,10 +111,11 @@
         
         .overview{
             margin-bottom: 3vh;
-            font-size: 0.9rem;
+            font-size: 1.5rem;
 
             @include devices(tiny){
-                display: none;
+                font-size: 0.275rem;
+                margin-bottom: 0;
             }
         }
         .watch-now{
@@ -109,9 +129,9 @@
             width: 48%;
 
             @include devices(tiny){
-                width: 50%;
+                width: 70%;
                 height: 2vh;
-                margin-top: 1vh;
+                margin-top: 0.7vh;
             }
 
             &:hover{
@@ -121,7 +141,7 @@
 
             p{
                 margin: auto;
-                font-size: 0.6rem;
+                font-size: 1rem;
                 margin-left: 0;
 
                 @include devices(tiny){
@@ -131,7 +151,8 @@
             }
             .play{
                 margin: auto;
-
+                width: 25px;
+                height: 25px;
                 .play:hover{
                     fill: #BE123C;
                     stroke: #BE123C;

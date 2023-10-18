@@ -12,7 +12,7 @@
     border: 1px solid black;
     border-radius: 0 50px 50px 0;
     height: 100vh;
-    padding-top: 8vh;
+    padding-top: 5vh;
 
     @include devices(tiny){
         display: none;
@@ -23,28 +23,27 @@
         cursor: pointer;
         margin-bottom: 0;
         
-
-        .icon{
-            margin: auto;
-        }
         
         
-        img{
-            width: 20px;
-            height: 20px;
-            margin: auto;
-        }
+        
+        
+        
     }
 
     .logo{
         padding-left: 10%;
+        margin-bottom: 5vh;
+        
         
         #logo{
-            width: 35px;
-            height: 35px;
+            width: 80px;
+            height: 80px;
+            margin-right: 8%;
         }
         h2{
-            font-size: 1rem;
+            font-size: 2rem;
+            margin-top: auto;
+            margin-bottom: auto;
         }
     }
     .one{
@@ -58,11 +57,22 @@
     }
     .two{
         height: 10vh;
-        padding-left: 13%;
-        padding-right:15%;
+        padding-left: 19%;
+        
+        
+
+        img{
+            width: 40px;
+            height: 40px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
 
         h2{
-            font-size: 0.7rem;
+            font-size: 1.6rem;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 10%;
         }
 
         &:hover{
@@ -70,12 +80,11 @@
             border-right: 5px solid #BE123C;
         }
     }
-    h2{
-        margin: auto;
-    }
+    
     .text{
         color: #666666;
         font-size: 1rem;
+
 
         &:hover{
             color: #BE123C;
@@ -97,7 +106,7 @@
 
         .play{
             width: 70%;
-            font-size: 0.5rem;
+            font-size: 1.02rem;
             font-family: 'Poppins', sans-serif;
             color:#333333CC;
             
@@ -106,7 +115,7 @@
             margin-right: auto;
         }
         .people{
-            font-size: 0.5rem;
+            font-size: 0.7rem;
             font-family: 'Poppins', sans-serif;
             font-weight: 100;
             width: 70%;
@@ -119,14 +128,14 @@
         button {
             background-color: #BE123C33;
             border: none;
-            border-radius: 10px;
+            border-radius: 40px;
             color:  #BE123C;
-            font-size: 0.6rem;
+            font-size: 0.8rem;
             font-family: 'Poppins', sans-serif;
             width: 60%;
             height: 3.5vh;
             margin-left: 19.5%;
-            font-size: 0.4rem;
+            font-weight: 600;
         };
     }
 }

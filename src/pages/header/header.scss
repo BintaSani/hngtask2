@@ -19,18 +19,18 @@
     color: #D1D5DB;
 
     @include devices(tiny){
-        top: 1.2vh
+        top: 0.1vh;
     }
 
     .logo-container{
         display: flex;
         justify-content: space-between;
-       
-        
+        width: 18%;
 
         #logo{
             margin-right: 25px;
-
+            width: 80px;
+            height: 80px;
             @include devices(tiny){
                 width: 30px;
                 height: 30px;
@@ -42,7 +42,7 @@
 
         h2{
             margin: auto;
-
+            font-size: 2.5rem;
             @include devices(tiny){
                 display: none;
             }
@@ -51,31 +51,32 @@
     .search-container{
         width: 60%;
         margin: auto;
-        
         height: 6vh;
         display: flex;
 
         .search{
             background-color: #ffffff00;
-            
+            outline: none;
             width: 75%;
             margin-left: auto;
             margin-right: auto;
-            border: 2px solid #D1D5DB;
+            border: 2.2px solid #D1D5DB;
+            color: #D1D5DB;
             border-radius: 5px;
             font-size: 0.9rem;
             padding-left: 1.5%;
 
             @include devices(tiny){
                 padding-top: 1vh;
+                padding: 3%;
             }
 
             &::placeholder{
                 color: #D1D5DB;
-                font-size: 0.9rem;
+                font-size: 1rem;
 
                 @include devices(tiny){
-                    font-size: 0.8rem;
+                    font-size: 0.6rem;
                 }
             }
 
@@ -91,13 +92,16 @@
         .search-icon{
             margin-right: 0;
             position: absolute;
-            left: 72%;
+            left: 75%;
             top: 3.3vh;
+            width: 20px;
+            height: 20px;
 
             @include devices (tiny){
-                width: 15px;
-                height: 15px;
-                top: 1.8vh;
+                width: 12px;
+                height: 12px;
+                top: 2.1vh;
+                left: 75%;
             }
         }
     }
@@ -105,16 +109,27 @@
     .menu-container{
         display: flex;
         justify-content: space-between;
-
+        
+        width: 9%;
+        
+        @include devices(tiny){
+            width: 15%;
+        }
         #menu{
             margin: auto;
             margin-left: 25px;
+            width: 45px;
+            height: 45px;
+            @include devices(tiny){
+                width: 36px;
+                height: 36px;
+            }
         }
 
         h3{
             margin: auto;
             cursor: pointer;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             
             &:hover{
                 color: #BE123C;

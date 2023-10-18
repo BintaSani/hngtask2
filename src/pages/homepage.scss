@@ -1,18 +1,51 @@
+@mixin devices($breakpoint) { //the name of the mixin is devices
+  
+    @if $breakpoint == tiny {    
+    @media screen and (max-width: 800px) {
+      @content;
+    }
+  }
+  
+}
+
 .homepage{
-    
+    padding-bottom: 0;
     .feature{
         width: 84%;
         display: flex;
         justify-content: space-between;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 5vh;
-        font-size: 0.8rem;
+        margin-top: 7vh;
+        margin-bottom: 5vh;
+        @include devices(tiny){
+            margin-top: 5vh;
+            margin-bottom: 3vh;
+        }
         
+        h3{
+            font-size: 2rem;
+
+            @include devices(tiny){
+                font-size: 1rem;
+            }
+        }
 
         p{
             color: #BE123C;
             cursor: pointer;
+            font-size: 1.5rem;
+            
+            @include devices(tiny){
+                font-size: 0.75rem;
+            }
         }
+    }
+    .search-results{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        margin-bottom: 30px;
+        justify-content: space-evenly;
+        margin-top: 2vh;
     }
 }

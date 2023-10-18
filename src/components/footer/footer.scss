@@ -13,9 +13,9 @@
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
-    margin-bottom: 3vh;
+    margin-bottom: 7vh;
     margin-top: 15vh;
-
+    
 
     @include devices(tiny){
         margin-left: 15%;
@@ -30,24 +30,37 @@
         justify-content: space-between;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 4vh;
+
+        @include devices(tiny){
+            width: 50%;
+        }
         
         .div{
             margin: auto;
-
+            
             .iconx{
                 @include devices(tiny){
                     height: 3vh;
                 }
             }
         }
+        .ig{
+            width: 8%;
+        }
     }
     .policy{
         display: flex;
         justify-content: space-between;
         margin-top: 2vh;
-        margin-bottom: 2vh;
+        margin-bottom: 4vh;
+        margin-left: auto;
+        margin-right: auto;
         width: 90%;
-
+        @include devices(tiny){
+            width: 100%;
+        }
+        
         h2{
             font-size: 1rem;
 
@@ -60,10 +73,10 @@
     .copyright{
         margin-left: auto;
         margin-right: auto;
-        width: 60%;
-
+        width: 29%;
+        
         @include devices(tiny){
-            width: 60%;
+            width: 65%;
         }
         h2{
             font-size: 1rem;

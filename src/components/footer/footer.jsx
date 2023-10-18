@@ -13,7 +13,7 @@ const Footer = () => {
         <div className='footer'>
             <div className='socials'>
                 <div className='div'><Facebook/></div>
-                <div className='div'><Instagram/></div>
+                <div className='div ig'><Instagram/></div>
                 <div className='div'><Twitter/></div>
                 <div className='div'><Youtube/></div> 
             </div>

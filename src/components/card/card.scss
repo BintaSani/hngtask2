@@ -21,6 +21,7 @@ div[data-testid='movie-card'] {
 
     @include devices(tiny){
         width: 40vw;
+        height: 25vh;
         
     }
   
@@ -30,22 +31,35 @@ div[data-testid='movie-card'] {
       background-size: cover;
       background-position: center;
       margin-bottom: 5px;
+
+      
+      @include devices(tiny){
+        height: 30vh;
+    }
       
         .svg{
             
-            width: 20%;
-            margin-left: 80%;
+            width: 13%;
+            margin-left: 82%;
             padding-top: 2vh;
 
             @include devices(tiny){
                 margin-left: 75%;
                 padding-top: 2vh;
+                width: 15%;
+                padding-top: 1vh;
+                margin-left: 82.2%;
+                
             }
-
+            .favorite{
+                width: 35px;
+                height: 35px;
+                @include devices(tiny){
+                    height: 20px;
+                    width: 20px;
+                }
+            }
             .favorite:hover{
-                height: 22px;
-                width: 22px;
-                //fill: #BE123C;
                 filter: invert(.6) sepia(1) saturate(5) hue-rotate(330deg);
             }
         }
@@ -55,11 +69,15 @@ div[data-testid='movie-card'] {
     .details{
         width: 100%;
         h5[data-testid='movie-title'] {
-            font-size: 0.9rem;
+            font-size: 1.5rem;
             margin: 0px;
             color: #111827;
             margin-top: 2vh;
-            
+
+            @include devices(tiny){
+                font-size: 1rem;
+                margin-top: 1vh;
+            }
         }
 
         .ratings{
@@ -93,7 +111,7 @@ div[data-testid='movie-card'] {
 
                 .popularity{
                     margin: auto;
-                    font-size: 0.6rem;
+                    font-size: 1.3rem;
                     color: #111827;
 
                     @include devices(tiny){
@@ -110,7 +128,8 @@ div[data-testid='movie-card'] {
                 #Capa_1{
                     
                     margin-right: 5px;
-                    height: 15px;
+                    height: 30px;
+                    width: 30px;
 
                     @include devices(tiny){
                         height: 2vh;
@@ -119,7 +138,7 @@ div[data-testid='movie-card'] {
                 }
                 .votes{
                     margin: auto;
-                    font-size: 0.6rem;
+                    font-size: 1.3rem;
                     color: #111827;
 
                     @include devices(tiny){
@@ -133,9 +152,13 @@ div[data-testid='movie-card'] {
         
 
         p[data-testid='movie-release-date'] {
-            font-size: 0.5rem;
+            font-size: 1rem;
             color: #9CA3AF;
             margin: 0px;
+
+            @include devices(tiny){
+                font-size: 0.5rem;
+            }
         }
         
         
