@@ -1,5 +1,5 @@
 import React from "react";
-import Poster from '../../assets/Poster.png';
+import Poster from '../../assets/Poster.jpg';
 import Imdb from '../../assets/imdb.png';
 import {ReactComponent as Tomato} from '../../assets/tomato.svg';
 import {ReactComponent as Watch} from '../../assets/play.svg';

@@ -11,13 +11,13 @@ import '../pages/header/header.scss';
 import './homepage.scss';
 import Card from '../components/card/card';
 import { options } from '../components/utils/utils';
-
+import { useNavigate } from 'react-router';
 const HomePage = () => {
     const [query, setQuery] = useState(''); // returns state, and
                                           //function to change state
   //create state for movies, and update that state appropriately
   const [movies, setMovies] = useState([])
-
+    const navigate = useNavigate();
   const searchMovies = async (e) => {
     e.preventDefault();
     const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`;
@@ -55,7 +55,7 @@ const HomePage = () => {
             </div>
             <div className='menu-container'>
                 <h3>Sign in</h3>
-                <Menu/>
+                <Menu onClick={()=> navigate (`/movie/458156`)}/>
             </div>
             
         </div>

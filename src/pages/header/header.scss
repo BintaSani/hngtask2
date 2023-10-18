@@ -13,11 +13,11 @@
     display: flex;
     justify-content: space-between;
     position: absolute;
-    left: 8%;
-    top: 3vh;
+    left: 7.9%;
+    top: 2vh;
     z-index: 1;
     color: #D1D5DB;
-
+    
     @include devices(tiny){
         top: 0.1vh;
     }
@@ -25,12 +25,11 @@
     .logo-container{
         display: flex;
         justify-content: space-between;
-        width: 18%;
-
+        width: 20%;
+        
         #logo{
-            margin-right: 25px;
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             @include devices(tiny){
                 width: 30px;
                 height: 30px;
@@ -42,7 +41,7 @@
 
         h2{
             margin: auto;
-            font-size: 2.5rem;
+            font-size: 2rem;
             @include devices(tiny){
                 display: none;
             }
@@ -92,7 +91,7 @@
         .search-icon{
             margin-right: 0;
             position: absolute;
-            left: 75%;
+            left: 74%;
             top: 3.3vh;
             width: 20px;
             height: 20px;
@@ -110,14 +109,15 @@
         display: flex;
         justify-content: space-between;
         
-        width: 9%;
+        width: 12%;
         
         @include devices(tiny){
             width: 15%;
         }
         #menu{
-            margin: auto;
-            margin-left: 25px;
+            margin-top: auto;
+            margin-bottom: auto;
+            
             width: 45px;
             height: 45px;
             @include devices(tiny){

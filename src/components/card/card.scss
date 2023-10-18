@@ -40,7 +40,7 @@ div[data-testid='movie-card'] {
         .svg{
             
             width: 13%;
-            margin-left: 82%;
+            margin-left: 79%;
             padding-top: 2vh;
 
             @include devices(tiny){
@@ -69,7 +69,7 @@ div[data-testid='movie-card'] {
     .details{
         width: 100%;
         h5[data-testid='movie-title'] {
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             margin: 0px;
             color: #111827;
             margin-top: 2vh;
@@ -99,9 +99,14 @@ div[data-testid='movie-card'] {
                 margin-left: 0;
                 height: 3vh;
                 justify-content: space-between;
+                
                 .imdb-logo{
                     margin-right: 5px;
-
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    height: 2.5vh;
+                    width: 30px;
+                    
                     @include devices(tiny){
                         height: 2vh;
                         margin: auto;
@@ -111,7 +116,7 @@ div[data-testid='movie-card'] {
 
                 .popularity{
                     margin: auto;
-                    font-size: 1.3rem;
+                    font-size: 0.8rem;
                     color: #111827;
 
                     @include devices(tiny){
@@ -123,13 +128,11 @@ div[data-testid='movie-card'] {
             }
             .tomato{
                 margin-right: 0;
-                
 
                 #Capa_1{
-                    
                     margin-right: 5px;
-                    height: 30px;
-                    width: 30px;
+                    height: 20px;
+                    width: 20px;
 
                     @include devices(tiny){
                         height: 2vh;
@@ -138,7 +141,7 @@ div[data-testid='movie-card'] {
                 }
                 .votes{
                     margin: auto;
-                    font-size: 1.3rem;
+                    font-size: 0.8rem;
                     color: #111827;
 
                     @include devices(tiny){
@@ -152,7 +155,7 @@ div[data-testid='movie-card'] {
         
 
         p[data-testid='movie-release-date'] {
-            font-size: 1rem;
+            font-size: 0.8rem;
             color: #9CA3AF;
             margin: 0px;
 
