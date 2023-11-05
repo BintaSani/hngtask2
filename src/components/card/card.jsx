@@ -92,8 +92,10 @@ const Card = ({movie}) =>{
     
     const {title, id, release_date, vote_average, poster_path, popularity} = movie;
     const popular = popularity / 1.5;
-    const imdb = Math.round(popular * 10) / 10;
-
+    const round = Math.round(popular * 10) / 10;
+    const imdb = round.toFixed(2);
+    const rating = vote_average * 10;
+    const average = rating.toFixed(2);
     const navigate = useNavigate();
     
     
@@ -117,7 +119,7 @@ const Card = ({movie}) =>{
                         <img src={Imdb} alt='imdb' className='imdb-logo'/> <p className='popularity'>{imdb} / 100</p>
                     </div>
                     <div className='tomato'>
-                        <Tomato/><p className='votes'>{vote_average * 10}%</p>
+                        <Tomato/><p className='votes'>{average}%</p>
                     </div>
                 </div>
                 
